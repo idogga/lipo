@@ -3,6 +3,12 @@
 *.ko
 *.obj
 *.elf
+*.json
+*.sqlite
+*.db
+*.opendb
+*.suo
+*.ipch
 
 # Precompiled Headers
 *.gch
