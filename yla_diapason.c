@@ -1,6 +1,6 @@
 #include "yla_diapason.h"
 
-void putNumberIn(yla_int_type **prog_ptr, yla_int_type subprog_start_addr, compliance_table *compliance, yla_int_type *prog_counter, yla_int_type global_var[])
+void putNumberIn(yla_int_type **prog_ptr, yla_int_type subprog_start_addr, complianceRow *compliance, yla_int_type *prog_counter, yla_int_type global_var[])
 {
 	yla_int_type prog_count = *prog_counter;
 	
@@ -23,7 +23,7 @@ void putNumberIn(yla_int_type **prog_ptr, yla_int_type subprog_start_addr, compl
 	put_value(prog_ptr, i);
 	prog_count += 2;
 	
-	compliance_table_set_addr(compliance, 0x0091, prog_count);
+	complianceTableSetAddr(compliance, 0x0091, prog_count);
 	put_commd(prog_ptr, CDUP);						
 	prog_count++;
 	put_value(prog_ptr, 0x0001);					
@@ -117,7 +117,7 @@ void putNumberIn(yla_int_type **prog_ptr, yla_int_type subprog_start_addr, compl
 	*prog_counter = prog_count;
 }
 
-void putNumberPost(yla_int_type **prog_ptr, yla_int_type subprog_start_addr, compliance_table *compliance, yla_int_type *prog_counter, yla_int_type global_var[])
+void putNumberPost(yla_int_type **prog_ptr, yla_int_type subprog_start_addr, complianceRow *compliance, yla_int_type *prog_counter, yla_int_type global_var[])
 {
 	yla_int_type prog_count = *prog_counter;
 	
@@ -173,7 +173,7 @@ void putNumberPost(yla_int_type **prog_ptr, yla_int_type subprog_start_addr, com
 	*prog_counter = prog_count;
 }
 
-void putNumberPre(yla_int_type **prog_ptr, yla_int_type subprog_start_addr, compliance_table *compliance, yla_int_type *prog_counter, yla_int_type global_var[])
+void putNumberPre(yla_int_type **prog_ptr, yla_int_type subprog_start_addr, complianceRow *compliance, yla_int_type *prog_counter, yla_int_type global_var[])
 {
 	yla_int_type prog_count = *prog_counter;
 	
