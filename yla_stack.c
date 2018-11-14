@@ -108,3 +108,12 @@ static void dprint(yla_stack* stack)
     }
     printf("}\n");
 }
+
+int yla_stack_tail_delete(yla_stack* stack, yla_int_type tail_size)
+{
+	if (stack->count < tail_size) {
+		return 0;
+	}
+	stack->count -= tail_size;
+	return 1;
+}

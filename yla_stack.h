@@ -44,5 +44,6 @@ int yla_stack_top(yla_stack* stack, yla_int_type *result);
 
 int yla_stack_is_empty(yla_stack* stack);
 int yla_stack_is_full(yla_stack* stack);
+int yla_stack_tail_delete(yla_stack* stack, yla_int_type tail_size);
 
 #endif
